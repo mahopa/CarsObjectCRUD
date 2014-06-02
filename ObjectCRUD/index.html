@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container well">
+        <div class="row clearfix">
+            <div class="col-md-4 column">
+            </div>
+            <div class="col-md-4 column">
+                <input type="text" class="form-control" id="make" placeholder="Enter Make" />
+                <br />
+                <input type="text" class="form-control" id="model" placeholder="Enter Model" />
+                <br />
+                <input type="text" class="form-control" id="picture" placeholder="Enter Picture URL" />
+                <br />
+                <div class="btn btn-danger btn-block" onclick="myApp.AddCar()">
+                    <span class="fa fa-automobile"></span>
+                    Add Car
+                </div>
+            </div>
+            <div class="col-md-4 column">
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-4 column">
+            </div>
+            <div class="col-md-4 column well-lg">
+                <div id="carOutput">
+                    <div class="row clearfix">
+                        <div class="col-md-6 col-md-offset-3 column" id="CarPicture">
+                            <img alt="140x140" src="http://lorempixel.com/140/140/" 
+                                 class="img-rounded img-responsive" /><br />
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12 column" id="CarInfo">
+                            <h3 class="text-center">
+                                Please click next to see our cars!
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-4 column">
+                        <button type="button" class="btn btn-default btn-block" onclick="myApp.PreviousCar()">Prev</button>
+                    </div>
+                    <div class="col-md-4 col-md-offset-4 column">
+                        <button type="button" class="btn btn-default btn-block" onclick="myApp.NextCar()">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 column">
+            </div>
+        </div>
+    </div>
+    <input type="text" class="form-control" id="EditCarMake" placeholder="Enter Make" />
+    <br />
+    <input type="text" class="form-control" id="EditCarModel" placeholder="Enter Model" />
+    <br />
+    <input type="text" class="form-control" id="EditCarUrl" placeholder="Enter Picture URL" />
+    <br />
+    <input type="hidden" id="EditCarId" />
+    <div class="btn btn-danger btn-block" onclick="myApp.SaveUpdate()">
+        <span class="fa fa-automobile"></span>
+        Save Car
+    </div>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/myJS.js"></script>
+</body>
+</html>
